@@ -1,6 +1,7 @@
 
 <html>
 <head>
+    {% block head %}
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name= "viewport" content= "width=device-width, initial-scale=1.0" />
@@ -9,6 +10,7 @@
 
     <style>
 
+       
         body {
                 background-image: url({{ url_for('static', filename='index3.jpg') }});
                 background-size: cover;
@@ -41,10 +43,12 @@
 
 
     </style>
+    {% endblock %}
 
     </head>
     <body>
 
+        
         <nav class= "navbar navbar-expand-lg navbar-dark bg-dark" >
 
             <div class= "container-fluid" >
@@ -54,6 +58,8 @@
                 <div  class= "collapse navbar-collapse" id= "navbar">
                     <div class= "navbar-nav  nav-fill w-100">
                         <a class= "nav-item nav-link" href= "/home", style="font-size: 25px !important;">Home</a>
+
+                        <a class= "nav-item nav-link" href= "/blog", style="font-size: 25px !important;">Blog</a>
 
                         <a class= "nav-item nav-link" href= "/about", style="font-size: 25px !important;">About</a>
 
@@ -65,8 +71,12 @@
 
         </nav>
 
-        <h1>{% block header %}{% endblock %}</h1>
-        <p>{% block content %}{% endblock %}</p>
+    
+
+        {% block body %}
+        {% endblock %}
+
+        
 
 
 

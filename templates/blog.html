@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block head %} 
+{{ super() }}
+
+<style>
+
+    
+    article {
+      background: white;
+      border: 3px solid #a0a0a0;
+      width: 90%;
+      margin: 20px auto;
+      border-radius: 10px;
+      padding: 10px;
+    }
+    
+
+    hr, article .date {
+      color: #a0a0a0;
+    }
+
+        h3 {
+
+            color: Tampa Bay Blue;
+            font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 200%;
+        }
+
+        p {
+
+            text-align: center;
+            color: Tampa Bay Blue;
+            font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+            
+        }
+
+</style>
+
+
+{% endblock %}
+
+
+{% block title %}Blog{% endblock %}
+{% block body %}
+    <h1>Blog</h1>
+    <article>
+        <h3>Olau Pla Richart</h3>
+        <hr />
+        <p>Blog will be comming with v=2.0 off the website! Be ready</p>
+        <p class="date">15-06-2022</p>
+    </article>
+    
+{% endblock %}
